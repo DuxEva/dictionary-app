@@ -1,30 +1,31 @@
-# React + TypeScript + Vite
+# Dictionary App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+The Dictionary App is a simple and elegant web application that allows users to search for word definitions. The app fetches data from the Dictionary API and displays word definitions, phonetics, and other related information. Users can also toggle between dark and light themes, and the app remembers their theme preference across sessions. Additionally, users can switch fonts using a convenient dropdown menu.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Word Search**: Users can search for the definitions of words.
+- **Phonetic Audio**: Users can listen to the phonetic pronunciation of words.
+- **Theme Switcher**: Users can toggle between dark and light themes.
+- **Font Switcher**: Users can choose between different fonts.
+- **Error Handling**: Displays error messages for invalid searches or network issues.
+- **Persistent Theme**: The app remembers the user's theme preference across sessions.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tech Stack
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: Superset of JavaScript for type safety.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Dictionary API**: External API for fetching word definitions.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Installation
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+To run the Dictionary App locally, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/DuxEva/dictionary-app.git
+   cd dictionary-app
+   run npm run dev

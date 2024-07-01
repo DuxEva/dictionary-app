@@ -67,13 +67,13 @@ const App = () => {
 
   return (
     <div
-      className={`min-h-screen w-full flex justify-center pt-10 ${
+      className={`min-h-screen w-full flex justify-center py-10 ${
         isDark
           ? "bg-dark-1 transition-all text-light-1"
           : "bg-light-1 transition-all"
       }`}
     >
-      <div className="w-1/2 max-md:w-full max-sm:w-full  h-full p-4">
+      <div className="w-1/2 max-md:w-full max-sm:w-full p-4">
         <Navbar />
         <Search
           value={search}
@@ -110,7 +110,7 @@ const App = () => {
               <ContentContainer key={index} meaning={meaning} />
             ))}
             <div className="h-[2px] w-full bg-light-3 my-7" />
-            <div className="flex gap-8">
+            <div className="flex gap-8 mb-10">
               <p className="font-semibold">source</p>
               <p>{data[0]?.sourceUrls[0]} </p>
             </div>
