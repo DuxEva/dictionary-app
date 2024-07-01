@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
 
   return (
     <div className={` flex justify-between items-center h-12`}>
-      <div className="w-[40px] h-[40px]">
+      <div className="w-[40px] h-[40px] max-md:w-full max-sm:w-[30px] max-sm:h-[30px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="100%"
@@ -35,10 +35,10 @@ const Navbar: React.FC = () => {
           </g>
         </svg>
       </div>
-      <div className="flex gap-9 items-center">
+      <div className="flex gap-9 max-sm:gap-4 items-center">
         <FontSwitcher onChange={handleFontChange} />
         <div className="w-[2px] h-10 bg-light-3 rounded-lg " />
-        <ThemeSwitcher /> 
+        <ThemeSwitcher />
         <div className="flex items-center justify-center w-[35px] h-[25px]">
           <button className={`text-${isDark ? "purple-1" : "light-4"}`}>
             <IoMoonOutline size={25} />

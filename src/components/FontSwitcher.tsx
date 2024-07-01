@@ -18,11 +18,7 @@ const FontSwitcher: React.FC<{ onChange: (font: string) => void }> = ({
   return (
     <div className="relative">
       <button
-        className={`w-[130px] p-2 rounded-lg border-none flex justify-between items-center ${
-          isDark
-            ? "bg-dark-1 text-light-1 border-dark-4"
-            : "bg-light-2 text-dark-1 border-light-4"
-        }`}
+        className={`w-[130px] p-2 rounded-lg border-none flex justify-between items-center `}
         onClick={() => setIsOpen(!isOpen)}
       >
         <span>{selectedFont}</span>
@@ -39,7 +35,7 @@ const FontSwitcher: React.FC<{ onChange: (font: string) => void }> = ({
           {["Sans-serif", "Serif", "Monospace"].map((font) => (
             <li
               key={font}
-              className={"p-2 cursor-pointer hover:text-purple-1" }
+              className={"p-2 cursor-pointer hover:text-purple-1"}
               onClick={() => handleFontChange(font)}
             >
               {font}
