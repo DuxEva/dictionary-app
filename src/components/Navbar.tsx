@@ -1,8 +1,20 @@
+import React from "react";
 import { IoMoonOutline } from "react-icons/io5";
+import ThemeSwitcher from "./ThemeSwitcher";
+import FontSwitcher from "./FontSwitcher";
+import useTheme from "./ThemeContext";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
+  const { isDark } = useTheme();
+  const [, setFont] = React.useState("Sans-serif");
+
+  const handleFontChange = (newFont: string) => {
+    setFont(newFont);
+    document.body.style.fontFamily = newFont;
+  };
+
   return (
-    <div className="w-full flex justify-between items-center h-12">
+    <div className={` flex justify-between items-center h-12`}>
       <div className="w-[40px] h-[40px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -24,11 +36,11 @@ const Navbar = () => {
         </svg>
       </div>
       <div className="flex gap-9 items-center">
-        <div className="w-[45px] h-[22px] rounded-full bg-light-4 p-1 relative flex items-center">
-          <div className="w-[18px] h-[18px] rounded-full bg-light-1" />
-        </div>
+        <FontSwitcher onChange={handleFontChange} />
+        <div className="w-[2px] h-10 bg-light-3 rounded-lg " />
+        <ThemeSwitcher /> 
         <div className="flex items-center justify-center w-[35px] h-[25px]">
-          <button className="text-light-4">
+          <button className={`text-${isDark ? "purple-1" : "light-4"}`}>
             <IoMoonOutline size={25} />
           </button>
         </div>

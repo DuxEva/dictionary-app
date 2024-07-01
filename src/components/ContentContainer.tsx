@@ -13,8 +13,20 @@ export interface Meaning {
   synonyms: string[];
 }
 
+interface Phonetic {
+  text: string;
+  audio?: string;
+}
+
+export interface WordData {
+  word: string;
+  phonetic?: string;
+  phonetics: Phonetic[];
+  origin?: string;
+  meanings: Meaning[];
+}
+
 const ContentContainer = ({ meaning }: { meaning: Meaning }) => {
-  console.log(meaning);
 
   return (
     <div>
